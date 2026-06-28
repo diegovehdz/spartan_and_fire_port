@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "spartanfire:witherbone_pole",
+  "ingredients": [
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "item": "iceandfire:witherbone"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "id": "spartanfire:witherbone_pole",
+    "count": 4
+  }
+}

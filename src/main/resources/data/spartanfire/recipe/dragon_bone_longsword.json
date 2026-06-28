@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "longsword"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:longsword",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    "#|#"
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_longsword",
+    "count": 1
+  }
+}

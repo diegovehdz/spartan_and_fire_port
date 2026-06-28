@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "greatsword"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:greatsword",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    " # ",
+    "###",
+    "#|#"
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_greatsword",
+    "count": 1
+  }
+}

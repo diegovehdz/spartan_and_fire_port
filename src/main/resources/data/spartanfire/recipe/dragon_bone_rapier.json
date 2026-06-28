@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "rapier"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:rapier",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    "  #",
+    "## ",
+    "|# "
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_rapier",
+    "count": 1
+  }
+}

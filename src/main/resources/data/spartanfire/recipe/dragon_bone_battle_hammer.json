@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "battle_hammer"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:battle_hammer",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    " | "
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_battle_hammer",
+    "count": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "battleaxe"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:battleaxe",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "/": {
+      "item": "iceandfire:witherbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    "###",
+    "#/#",
+    " | "
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_battleaxe",
+    "count": 1
+  }
+}

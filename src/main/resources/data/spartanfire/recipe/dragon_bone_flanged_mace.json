@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "flanged_mace"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:flanged_mace",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "/": {
+      "item": "iceandfire:witherbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    " ##",
+    " /#",
+    "|  "
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_flanged_mace",
+    "count": 1
+  }
+}

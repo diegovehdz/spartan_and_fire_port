@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "saber"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:saber",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "|": {
+      "item": "spartanfire:witherbone_handle"
+    }
+  },
+  "pattern": [
+    " #",
+    " #",
+    "#|"
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_saber",
+    "count": 1
+  }
+}

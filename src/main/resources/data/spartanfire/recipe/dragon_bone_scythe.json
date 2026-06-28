@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "scythe"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:scythe",
+  "key": {
+    "#": {
+      "item": "iceandfire:dragonbone"
+    },
+    "/": {
+      "item": "spartanfire:witherbone_pole"
+    }
+  },
+  "pattern": [
+    "## ",
+    "  #",
+    " / "
+  ],
+  "result": {
+    "id": "spartanfire:dragon_bone_scythe",
+    "count": 1
+  }
+}
