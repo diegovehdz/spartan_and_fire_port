@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "spartanfire:dragon_bone_tomahawk"
+    "spartanfire:dragon_bone_tomahawk",
+    "spartanfire:flamed_dragon_bone_tomahawk",
+    "spartanfire:iced_dragon_bone_tomahawk",
+    "spartanfire:lightning_dragon_bone_tomahawk"
   ]
 }

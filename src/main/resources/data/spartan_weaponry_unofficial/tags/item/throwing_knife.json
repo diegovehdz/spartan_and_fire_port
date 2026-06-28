@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "spartanfire:dragon_bone_throwing_knife"
+    "spartanfire:dragon_bone_throwing_knife",
+    "spartanfire:flamed_dragon_bone_throwing_knife",
+    "spartanfire:iced_dragon_bone_throwing_knife",
+    "spartanfire:lightning_dragon_bone_throwing_knife"
   ]
 }

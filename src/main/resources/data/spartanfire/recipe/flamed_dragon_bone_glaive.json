@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "glaive"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:glaive",
+  "ingredients": [
+    {
+      "item": "spartanfire:dragon_bone_glaive"
+    },
+    {
+      "item": "iceandfire:fire_dragon_blood"
+    }
+  ],
+  "result": {
+    "id": "spartanfire:flamed_dragon_bone_glaive",
+    "count": 1
+  }
+}

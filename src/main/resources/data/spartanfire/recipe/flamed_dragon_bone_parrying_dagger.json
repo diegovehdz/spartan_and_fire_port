@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "parrying_dagger"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:parrying_dagger",
+  "ingredients": [
+    {
+      "item": "spartanfire:dragon_bone_parrying_dagger"
+    },
+    {
+      "item": "iceandfire:fire_dragon_blood"
+    }
+  ],
+  "result": {
+    "id": "spartanfire:flamed_dragon_bone_parrying_dagger",
+    "count": 1
+  }
+}

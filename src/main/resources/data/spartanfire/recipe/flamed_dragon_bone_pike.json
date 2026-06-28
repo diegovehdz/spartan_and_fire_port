@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "pike"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:pike",
+  "ingredients": [
+    {
+      "item": "spartanfire:dragon_bone_pike"
+    },
+    {
+      "item": "iceandfire:fire_dragon_blood"
+    }
+  ],
+  "result": {
+    "id": "spartanfire:flamed_dragon_bone_pike",
+    "count": 1
+  }
+}

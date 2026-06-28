@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "spartanfire:dragon_bone_rapier"
+    "spartanfire:dragon_bone_rapier",
+    "spartanfire:flamed_dragon_bone_rapier",
+    "spartanfire:iced_dragon_bone_rapier",
+    "spartanfire:lightning_dragon_bone_rapier"
   ]
 }

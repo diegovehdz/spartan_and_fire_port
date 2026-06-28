@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "spartanfire:dragon_bone_flanged_mace"
+    "spartanfire:dragon_bone_flanged_mace",
+    "spartanfire:flamed_dragon_bone_flanged_mace",
+    "spartanfire:iced_dragon_bone_flanged_mace",
+    "spartanfire:lightning_dragon_bone_flanged_mace"
   ]
 }

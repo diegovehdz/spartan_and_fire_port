@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "tomahawk"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:tomahawk",
+  "ingredients": [
+    {
+      "item": "spartanfire:dragon_bone_tomahawk"
+    },
+    {
+      "item": "iceandfire:fire_dragon_blood"
+    }
+  ],
+  "result": {
+    "id": "spartanfire:flamed_dragon_bone_tomahawk",
+    "count": 1
+  }
+}

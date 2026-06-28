@@ -1,6 +1,11 @@
 package krelox.spartanfire;
 
 import com.iafenvoy.iceandfire.registry.IafTiers;
+import krelox.spartanfire.trait.FireDragonDamageBonusTrait;
+import krelox.spartanfire.trait.FlamedTrait;
+import krelox.spartanfire.trait.IceDragonDamageBonusTrait;
+import krelox.spartanfire.trait.IcedTrait;
+import krelox.spartanfire.trait.ShockedTrait;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -24,8 +29,9 @@ import java.util.function.Function;
 
 /**
  * SpartanFire port — Spartan Weaponry weapons forged from Ice and Fire materials.
- * Registers the full dragon bone tier (all weapon types + witherbone components)
- * against the Spartan Weaponry Unofficial fork API and Ice and Fire CE tiers.
+ * Registers the dragon bone tier (base + flamed/iced/lightning) with all weapon types,
+ * witherbone components, and the elemental weapon traits, against the Spartan Weaponry
+ * Unofficial fork API and Ice and Fire CE tiers.
  */
 @Mod(SpartanFire.MODID)
 public class SpartanFire {
@@ -34,6 +40,8 @@ public class SpartanFire {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<CreativeModeTab> TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+    public static final DeferredRegister<WeaponTrait> TRAITS =
+            DeferredRegister.create(WeaponTraits.REGISTRY_KEY, MODID);
 
     /** Display order for the creative tab. */
     private static final List<DeferredHolder<Item, Item>> TAB_ENTRIES = new ArrayList<>();
@@ -48,6 +56,19 @@ public class SpartanFire {
     private static TagKey<WeaponTrait> traitTag(String name) {
         return TagKey.create(WeaponTraits.REGISTRY_KEY,
                 ResourceLocation.fromNamespaceAndPath(MODID, "materials/" + name));
+    }
+
+    // --- Weapon traits (referenced by the material trait tags) ---
+    static {
+        TRAITS.register("flamed_1", () -> new FlamedTrait().setLevel(1).setMagnitude(5.0F));
+        TRAITS.register("flamed_2", () -> new FlamedTrait().setLevel(2).setMagnitude(15.0F));
+        TRAITS.register("iced_1", () -> new IcedTrait().setLevel(1));
+        TRAITS.register("iced_2", () -> new IcedTrait().setLevel(2));
+        TRAITS.register("shocked", ShockedTrait::new);
+        TRAITS.register("fire_dragon_damage_bonus_1", () -> new FireDragonDamageBonusTrait().setLevel(1));
+        TRAITS.register("fire_dragon_damage_bonus_2", () -> new FireDragonDamageBonusTrait().setLevel(2));
+        TRAITS.register("ice_dragon_damage_bonus_1", () -> new IceDragonDamageBonusTrait().setLevel(1));
+        TRAITS.register("ice_dragon_damage_bonus_2", () -> new IceDragonDamageBonusTrait().setLevel(2));
     }
 
     /** The 24 Spartan weapon types, mapped to the fork's factory methods. */
@@ -87,9 +108,25 @@ public class SpartanFire {
             .traitsTag(traitTag("dragon_bone"))
             .build();
 
-    // --- Weapons (all 24 types for dragon bone) ---
+    // Elemental variants share Ice and Fire CE's blooded-dragonbone stats; they differ by traits.
+    public static final WeaponMaterial FLAMED_DRAGON_BONE = elementalDragonBone("flamed_dragon_bone");
+    public static final WeaponMaterial ICED_DRAGON_BONE = elementalDragonBone("iced_dragon_bone");
+    public static final WeaponMaterial LIGHTNING_DRAGON_BONE = elementalDragonBone("lightning_dragon_bone");
+
+    private static WeaponMaterial elementalDragonBone(String name) {
+        return WeaponMaterial.builder(name, MODID)
+                .tier(IafTiers.BLOODED_DRAGONBONE_TOOL_MATERIAL)
+                .repairTag(repairTag("dragon_bone"))
+                .traitsTag(traitTag(name))
+                .build();
+    }
+
+    // --- Weapons (all 24 types for every dragon bone material) ---
     static {
         registerWeapons("dragon_bone", DRAGON_BONE);
+        registerWeapons("flamed_dragon_bone", FLAMED_DRAGON_BONE);
+        registerWeapons("iced_dragon_bone", ICED_DRAGON_BONE);
+        registerWeapons("lightning_dragon_bone", LIGHTNING_DRAGON_BONE);
     }
 
     private static void registerWeapons(String materialName, WeaponMaterial material) {
@@ -115,12 +152,13 @@ public class SpartanFire {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> SPARTAN_FIRE_TAB = TABS.register(MODID,
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup." + MODID))
-                    .icon(() -> WEAPONS.get("dragon_bone_greatsword").get().getDefaultInstance())
+                    .icon(() -> WEAPONS.get("flamed_dragon_bone_greatsword").get().getDefaultInstance())
                     .displayItems((params, output) -> TAB_ENTRIES.forEach(h -> output.accept(h.get())))
                     .build());
 
     public SpartanFire(IEventBus modBus) {
         ITEMS.register(modBus);
         TABS.register(modBus);
+        TRAITS.register(modBus);
     }
 }

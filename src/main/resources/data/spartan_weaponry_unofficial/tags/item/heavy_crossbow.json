@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "spartanfire:dragon_bone_heavy_crossbow"
+    "spartanfire:dragon_bone_heavy_crossbow",
+    "spartanfire:flamed_dragon_bone_heavy_crossbow",
+    "spartanfire:iced_dragon_bone_heavy_crossbow",
+    "spartanfire:lightning_dragon_bone_heavy_crossbow"
   ]
 }

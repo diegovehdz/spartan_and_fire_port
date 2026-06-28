@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "spartanfire:dragon_bone_javelin"
+    "spartanfire:dragon_bone_javelin",
+    "spartanfire:flamed_dragon_bone_javelin",
+    "spartanfire:iced_dragon_bone_javelin",
+    "spartanfire:lightning_dragon_bone_javelin"
   ]
 }

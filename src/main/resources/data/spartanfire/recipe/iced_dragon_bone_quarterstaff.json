@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "spartan_weaponry_unofficial:type_disabled",
+      "disabled": [
+        "quarterstaff"
+      ]
+    }
+  ],
+  "group": "spartan_weaponry_unofficial:quarterstaff",
+  "ingredients": [
+    {
+      "item": "spartanfire:dragon_bone_quarterstaff"
+    },
+    {
+      "item": "iceandfire:ice_dragon_blood"
+    }
+  ],
+  "result": {
+    "id": "spartanfire:iced_dragon_bone_quarterstaff",
+    "count": 1
+  }
+}
