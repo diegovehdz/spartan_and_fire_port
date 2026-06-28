@@ -1,0 +1,43 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/KreloX/SpartanFire/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="KreloX (port: Requiem)"
+credits="Original mod by KreloX. Ported to NeoForge 1.21.1 for the Requiem modpack, against Spartan Weaponry Unofficial and Ice and Fire: Community Edition."
+description='''
+Addon mod for Spartan Weaponry that adds compatibility with Ice and Fire.
+Adds Spartan-style weapons forged from Ice and Fire's dragonbone and dragonsteel materials.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="spartan_weaponry_unofficial"
+    type="required"
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="iceandfire"
+    type="required"
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
