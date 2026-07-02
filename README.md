@@ -12,7 +12,7 @@ Original mod is MIT (KreloX). This port keeps that license.
 
 > Standalone project (originally prototyped inside the *Requiem* modpack, now decoupled).
 
-## Status — ⏸️ paused / archived
+## Status — paused / archived
 
 **Working vertical slice** (verified in-game): **dragonbone** weapons — dagger, longsword, greatsword,
 battle hammer, halberd, heavy crossbow. Items register, models/textures render, material tooltip works,
